@@ -1,0 +1,12 @@
+{
+  "label": "e5_mild_s850_n128",
+  "target": "e5",
+  "n": 128,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "train_epochs": 8.5,
+    "decay_epochs": 8.375
+  },
+  "plain_eval": true
+}

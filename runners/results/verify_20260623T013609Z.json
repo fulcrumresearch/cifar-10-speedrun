@@ -1,0 +1,965 @@
+{
+  "local": {
+    "certification_edge_cases": {
+      "all_pass_0.95": {
+        "p": 0.0,
+        "certifies": true,
+        "acc_mean": 0.95
+      },
+      "all_fail_0.93": {
+        "p": 1.0,
+        "certifies": false,
+        "acc_mean": 0.93
+      },
+      "zerovar_pass": {
+        "p": 0.0,
+        "certifies": true,
+        "acc_mean": 0.95
+      },
+      "zerovar_fail": {
+        "p": 1.0,
+        "certifies": false,
+        "acc_mean": 0.93
+      },
+      "mixed": {
+        "p": 0.10010003708314215,
+        "certifies": false,
+        "acc_mean": 0.941
+      }
+    },
+    "flat_mirror_guard": {
+      "incomplete": {
+        "mirror_written": false,
+        "expected": false
+      },
+      "mutated": {
+        "mirror_written": false,
+        "expected": false
+      },
+      "valid": {
+        "mirror_written": true,
+        "expected": true
+      }
+    }
+  },
+  "targets": {
+    "hiverge": {
+      "build_s": {
+        "X": 25.479,
+        "Y": 19.959
+      },
+      "telemetry": {
+        "X_build": [
+          {
+            "temp_c": 32.0,
+            "power_w": 68.68,
+            "sm_mhz": 765.0
+          },
+          {
+            "temp_c": 35.0,
+            "power_w": 72.58,
+            "sm_mhz": 1155.0
+          }
+        ]
+      },
+      "dataset_sha_match_across_containers": "MATCH",
+      "static_cache_match_across_containers": "MATCH",
+      "static_cache_sig": {
+        "norm": [
+          [
+            50000,
+            3,
+            32,
+            32
+          ],
+          "torch.float16",
+          -15020.844,
+          153575440.0
+        ],
+        "flip": [
+          [
+            50000,
+            3,
+            32,
+            32
+          ],
+          "torch.float16",
+          -15020.75,
+          153575440.0
+        ],
+        "pad": [
+          [
+            50000,
+            3,
+            36,
+            36
+          ],
+          "torch.float16",
+          2067632.625,
+          198169712.0
+        ]
+      },
+      "env": {
+        "python": "3.12.1",
+        "torch": "2.4.0+cu124",
+        "torchvision": "0.19.0+cu124",
+        "cuda": "12.4",
+        "runners_file": "/root/runners/__init__.py",
+        "cifar_data_env": "/cifar/data",
+        "device": "NVIDIA A100-SXM4-80GB"
+      },
+      "gpu": [
+        "NVIDIA A100-SXM4-80GB",
+        "NVIDIA A100-SXM4-80GB"
+      ],
+      "order_independence_within_X": {
+        "0": {
+          "model_fp": "MATCH",
+          "acc": "MATCH",
+          "acc_p0": 0.941125,
+          "acc_p1": 0.941125
+        },
+        "1": {
+          "model_fp": "MATCH",
+          "acc": "MATCH",
+          "acc_p0": 0.937875,
+          "acc_p1": 0.937875
+        }
+      },
+      "determinism_across_containers": {
+        "0": {
+          "model_fp": "DIFFER",
+          "acc": "DIFFER"
+        },
+        "1": {
+          "model_fp": "DIFFER",
+          "acc": "DIFFER"
+        }
+      },
+      "timing": {
+        "train_loop_mean_s": 1.9319,
+        "compute_honest_mean_s": 1.9644,
+        "acc_mean": 0.93947,
+        "acc_range": [
+          0.93788,
+          0.94112
+        ],
+        "first_trial_train_mean_s": 1.9304,
+        "rest_trial_train_mean_s": 1.9334,
+        "eval_s_mean": 0.2005,
+        "any_eval_mutated_weights": false
+      },
+      "_raw": {
+        "X": {
+          "target": "hiverge",
+          "env": {
+            "python": "3.12.1",
+            "torch": "2.4.0+cu124",
+            "torchvision": "0.19.0+cu124",
+            "cuda": "12.4",
+            "runners_file": "/root/runners/__init__.py",
+            "cifar_data_env": "/cifar/data",
+            "device": "NVIDIA A100-SXM4-80GB"
+          },
+          "dataset": {
+            "test_sha16": "86ee20a9754e0e82",
+            "train_sha16": "5a4d8933387d6f17",
+            "test_images_shape": [
+              10000,
+              32,
+              32,
+              3
+            ],
+            "test_label_counts": [
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000
+            ],
+            "classes": [
+              "airplane",
+              "automobile",
+              "bird",
+              "cat",
+              "deer",
+              "dog",
+              "frog",
+              "horse",
+              "ship",
+              "truck"
+            ]
+          },
+          "gpu_guard": "NVIDIA A100-SXM4-80GB",
+          "build": {
+            "build_s": 25.479,
+            "ok": true,
+            "telem_before": {
+              "temp_c": 32.0,
+              "power_w": 68.68,
+              "sm_mhz": 765.0
+            },
+            "telem_after": {
+              "temp_c": 35.0,
+              "power_w": 72.58,
+              "sm_mhz": 1155.0
+            }
+          },
+          "static_cache_sig": {
+            "norm": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.844,
+              153575440.0
+            ],
+            "flip": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.75,
+              153575440.0
+            ],
+            "pad": [
+              [
+                50000,
+                3,
+                36,
+                36
+              ],
+              "torch.float16",
+              2067632.625,
+              198169712.0
+            ]
+          },
+          "passes": [
+            {
+              "order": [
+                0,
+                1
+              ],
+              "rows": [
+                {
+                  "tid": 0,
+                  "local_idx": 0,
+                  "prepare_s": 0.05348,
+                  "train_loop_s": 1.91608,
+                  "compute_honest_s": 1.96957,
+                  "graded": 0.941125,
+                  "model_fp": "805e9199327d7d5f35e31e5b090efded",
+                  "eval_s": 0.3511,
+                  "eval_mutated_weights": false,
+                  "graph_state": {}
+                },
+                {
+                  "tid": 1,
+                  "local_idx": 1,
+                  "prepare_s": 0.02601,
+                  "train_loop_s": 1.91769,
+                  "compute_honest_s": 1.94371,
+                  "graded": 0.937875,
+                  "model_fp": "1c8925999ce76bcab20caf7db2c7ef1e",
+                  "eval_s": 0.1477,
+                  "eval_mutated_weights": false,
+                  "graph_state": {}
+                }
+              ]
+            },
+            {
+              "order": [
+                1,
+                0
+              ],
+              "rows": [
+                {
+                  "tid": 1,
+                  "local_idx": 0,
+                  "prepare_s": 0.0258,
+                  "train_loop_s": 1.92178,
+                  "compute_honest_s": 1.94758,
+                  "graded": 0.937875,
+                  "model_fp": "1c8925999ce76bcab20caf7db2c7ef1e",
+                  "eval_s": 0.1482,
+                  "eval_mutated_weights": false,
+                  "graph_state": {}
+                },
+                {
+                  "tid": 0,
+                  "local_idx": 1,
+                  "prepare_s": 0.0258,
+                  "train_loop_s": 1.92308,
+                  "compute_honest_s": 1.94887,
+                  "graded": 0.941125,
+                  "model_fp": "805e9199327d7d5f35e31e5b090efded",
+                  "eval_s": 0.1483,
+                  "eval_mutated_weights": false,
+                  "graph_state": {}
+                }
+              ]
+            }
+          ]
+        },
+        "Y": {
+          "target": "hiverge",
+          "env": {
+            "python": "3.12.1",
+            "torch": "2.4.0+cu124",
+            "torchvision": "0.19.0+cu124",
+            "cuda": "12.4",
+            "runners_file": "/root/runners/__init__.py",
+            "cifar_data_env": "/cifar/data",
+            "device": "NVIDIA A100-SXM4-80GB"
+          },
+          "dataset": {
+            "test_sha16": "86ee20a9754e0e82",
+            "train_sha16": "5a4d8933387d6f17",
+            "test_images_shape": [
+              10000,
+              32,
+              32,
+              3
+            ],
+            "test_label_counts": [
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000
+            ],
+            "classes": [
+              "airplane",
+              "automobile",
+              "bird",
+              "cat",
+              "deer",
+              "dog",
+              "frog",
+              "horse",
+              "ship",
+              "truck"
+            ]
+          },
+          "gpu_guard": "NVIDIA A100-SXM4-80GB",
+          "build": {
+            "build_s": 19.959,
+            "ok": true,
+            "telem_before": {
+              "temp_c": 38.0,
+              "power_w": 67.76,
+              "sm_mhz": 780.0
+            },
+            "telem_after": {
+              "temp_c": 43.0,
+              "power_w": 258.81,
+              "sm_mhz": 1155.0
+            }
+          },
+          "static_cache_sig": {
+            "norm": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.844,
+              153575440.0
+            ],
+            "flip": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.75,
+              153575440.0
+            ],
+            "pad": [
+              [
+                50000,
+                3,
+                36,
+                36
+              ],
+              "torch.float16",
+              2067632.625,
+              198169712.0
+            ]
+          },
+          "passes": [
+            {
+              "order": [
+                0,
+                1
+              ],
+              "rows": [
+                {
+                  "tid": 0,
+                  "local_idx": 0,
+                  "prepare_s": 0.0535,
+                  "train_loop_s": 1.93544,
+                  "compute_honest_s": 1.98894,
+                  "graded": 0.94075,
+                  "model_fp": "c904f2625f4873e0ae29dd6f059632d4",
+                  "eval_s": 0.3586,
+                  "eval_mutated_weights": false,
+                  "graph_state": {}
+                },
+                {
+                  "tid": 1,
+                  "local_idx": 1,
+                  "prepare_s": 0.02475,
+                  "train_loop_s": 1.94355,
+                  "compute_honest_s": 1.9683,
+                  "graded": 0.938125,
+                  "model_fp": "adb2a4eb8ea79c7948d737f1209772d7",
+                  "eval_s": 0.1498,
+                  "eval_mutated_weights": false,
+                  "graph_state": {}
+                }
+              ]
+            },
+            {
+              "order": [
+                1,
+                0
+              ],
+              "rows": [
+                {
+                  "tid": 1,
+                  "local_idx": 0,
+                  "prepare_s": 0.02491,
+                  "train_loop_s": 1.9484,
+                  "compute_honest_s": 1.97332,
+                  "graded": 0.938125,
+                  "model_fp": "adb2a4eb8ea79c7948d737f1209772d7",
+                  "eval_s": 0.15,
+                  "eval_mutated_weights": false,
+                  "graph_state": {}
+                },
+                {
+                  "tid": 0,
+                  "local_idx": 1,
+                  "prepare_s": 0.02577,
+                  "train_loop_s": 1.94946,
+                  "compute_honest_s": 1.97523,
+                  "graded": 0.94075,
+                  "model_fp": "c904f2625f4873e0ae29dd6f059632d4",
+                  "eval_s": 0.15,
+                  "eval_mutated_weights": false,
+                  "graph_state": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "e1": {
+      "build_s": {
+        "X": 51.886,
+        "Y": 76.948
+      },
+      "telemetry": {
+        "X_build": [
+          {
+            "temp_c": 41.0,
+            "power_w": 92.49,
+            "sm_mhz": 1410.0
+          },
+          {
+            "temp_c": 37.0,
+            "power_w": 74.5,
+            "sm_mhz": 1155.0
+          }
+        ]
+      },
+      "dataset_sha_match_across_containers": "MATCH",
+      "static_cache_match_across_containers": "MATCH",
+      "static_cache_sig": {
+        "norm": [
+          [
+            50000,
+            3,
+            32,
+            32
+          ],
+          "torch.float16",
+          -15020.844,
+          153575440.0
+        ],
+        "flip": [
+          [
+            50000,
+            3,
+            32,
+            32
+          ],
+          "torch.float16",
+          -15020.781,
+          153575440.0
+        ],
+        "pad": [
+          [
+            50000,
+            3,
+            36,
+            36
+          ],
+          "torch.float16",
+          2067632.625,
+          198169728.0
+        ]
+      },
+      "env": {
+        "python": "3.12.1",
+        "torch": "2.4.0+cu124",
+        "torchvision": "0.19.0+cu124",
+        "cuda": "12.4",
+        "runners_file": "/root/runners/__init__.py",
+        "cifar_data_env": "/cifar/data",
+        "device": "NVIDIA A100-SXM4-80GB",
+        "e1_recipe_file": "/root/runners/recipes/e1.py",
+        "e1_DATA_PATH": "/cifar/data"
+      },
+      "gpu": [
+        "NVIDIA A100-SXM4-80GB",
+        "NVIDIA A100-SXM4-80GB"
+      ],
+      "order_independence_within_X": {
+        "0": {
+          "model_fp": "MATCH",
+          "acc": "MATCH",
+          "acc_p0": 0.9405,
+          "acc_p1": 0.9405
+        },
+        "1": {
+          "model_fp": "MATCH",
+          "acc": "MATCH",
+          "acc_p0": 0.94225,
+          "acc_p1": 0.94225
+        }
+      },
+      "determinism_across_containers": {
+        "0": {
+          "model_fp": "DIFFER",
+          "acc": "DIFFER"
+        },
+        "1": {
+          "model_fp": "DIFFER",
+          "acc": "DIFFER"
+        }
+      },
+      "timing": {
+        "train_loop_mean_s": 1.7593,
+        "compute_honest_mean_s": 1.8254,
+        "acc_mean": 0.94116,
+        "acc_range": [
+          0.94,
+          0.94225
+        ],
+        "first_trial_train_mean_s": 1.7639,
+        "rest_trial_train_mean_s": 1.7547,
+        "eval_s_mean": 0.175,
+        "any_eval_mutated_weights": false
+      },
+      "e1_graph_state_sample": {
+        "opt2_step_count": 0,
+        "loader_epoch": 9,
+        "n_momentum_buffers": 6,
+        "momentum_absmax_before_train": 0.0
+      },
+      "_raw": {
+        "X": {
+          "target": "e1",
+          "env": {
+            "python": "3.12.1",
+            "torch": "2.4.0+cu124",
+            "torchvision": "0.19.0+cu124",
+            "cuda": "12.4",
+            "runners_file": "/root/runners/__init__.py",
+            "cifar_data_env": "/cifar/data",
+            "device": "NVIDIA A100-SXM4-80GB",
+            "e1_recipe_file": "/root/runners/recipes/e1.py",
+            "e1_DATA_PATH": "/cifar/data"
+          },
+          "dataset": {
+            "test_sha16": "86ee20a9754e0e82",
+            "train_sha16": "5a4d8933387d6f17",
+            "test_images_shape": [
+              10000,
+              32,
+              32,
+              3
+            ],
+            "test_label_counts": [
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000
+            ],
+            "classes": [
+              "airplane",
+              "automobile",
+              "bird",
+              "cat",
+              "deer",
+              "dog",
+              "frog",
+              "horse",
+              "ship",
+              "truck"
+            ]
+          },
+          "gpu_guard": "NVIDIA A100-SXM4-80GB",
+          "build": {
+            "build_s": 51.886,
+            "ok": true,
+            "telem_before": {
+              "temp_c": 41.0,
+              "power_w": 92.49,
+              "sm_mhz": 1410.0
+            },
+            "telem_after": {
+              "temp_c": 37.0,
+              "power_w": 74.5,
+              "sm_mhz": 1155.0
+            }
+          },
+          "static_cache_sig": {
+            "norm": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.844,
+              153575440.0
+            ],
+            "flip": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.781,
+              153575440.0
+            ],
+            "pad": [
+              [
+                50000,
+                3,
+                36,
+                36
+              ],
+              "torch.float16",
+              2067632.625,
+              198169728.0
+            ]
+          },
+          "passes": [
+            {
+              "order": [
+                0,
+                1
+              ],
+              "rows": [
+                {
+                  "tid": 0,
+                  "local_idx": 0,
+                  "prepare_s": 0.07726,
+                  "train_loop_s": 1.757,
+                  "compute_honest_s": 1.83426,
+                  "graded": 0.9405,
+                  "model_fp": "8e2e52983bfd7152bea3831371902167",
+                  "eval_s": 0.1494,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  }
+                },
+                {
+                  "tid": 1,
+                  "local_idx": 1,
+                  "prepare_s": 0.06185,
+                  "train_loop_s": 1.74763,
+                  "compute_honest_s": 1.80948,
+                  "graded": 0.94225,
+                  "model_fp": "d48bd2ec817e29bf4071b87d0a8a515c",
+                  "eval_s": 0.1492,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "order": [
+                1,
+                0
+              ],
+              "rows": [
+                {
+                  "tid": 1,
+                  "local_idx": 0,
+                  "prepare_s": 0.06188,
+                  "train_loop_s": 1.74868,
+                  "compute_honest_s": 1.81056,
+                  "graded": 0.94225,
+                  "model_fp": "d48bd2ec817e29bf4071b87d0a8a515c",
+                  "eval_s": 0.1488,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  }
+                },
+                {
+                  "tid": 0,
+                  "local_idx": 1,
+                  "prepare_s": 0.07023,
+                  "train_loop_s": 1.74935,
+                  "compute_honest_s": 1.81958,
+                  "graded": 0.9405,
+                  "model_fp": "8e2e52983bfd7152bea3831371902167",
+                  "eval_s": 0.1489,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Y": {
+          "target": "e1",
+          "env": {
+            "python": "3.12.1",
+            "torch": "2.4.0+cu124",
+            "torchvision": "0.19.0+cu124",
+            "cuda": "12.4",
+            "runners_file": "/root/runners/__init__.py",
+            "cifar_data_env": "/cifar/data",
+            "device": "NVIDIA A100-SXM4-80GB",
+            "e1_recipe_file": "/root/runners/recipes/e1.py",
+            "e1_DATA_PATH": "/cifar/data"
+          },
+          "dataset": {
+            "test_sha16": "86ee20a9754e0e82",
+            "train_sha16": "5a4d8933387d6f17",
+            "test_images_shape": [
+              10000,
+              32,
+              32,
+              3
+            ],
+            "test_label_counts": [
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000
+            ],
+            "classes": [
+              "airplane",
+              "automobile",
+              "bird",
+              "cat",
+              "deer",
+              "dog",
+              "frog",
+              "horse",
+              "ship",
+              "truck"
+            ]
+          },
+          "gpu_guard": "NVIDIA A100-SXM4-80GB",
+          "build": {
+            "build_s": 76.948,
+            "ok": true,
+            "telem_before": {
+              "temp_c": 30.0,
+              "power_w": 65.06,
+              "sm_mhz": 720.0
+            },
+            "telem_after": {
+              "temp_c": 35.0,
+              "power_w": 70.79,
+              "sm_mhz": 1155.0
+            }
+          },
+          "static_cache_sig": {
+            "norm": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.844,
+              153575440.0
+            ],
+            "flip": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.781,
+              153575440.0
+            ],
+            "pad": [
+              [
+                50000,
+                3,
+                36,
+                36
+              ],
+              "torch.float16",
+              2067632.625,
+              198169728.0
+            ]
+          },
+          "passes": [
+            {
+              "order": [
+                0,
+                1
+              ],
+              "rows": [
+                {
+                  "tid": 0,
+                  "local_idx": 0,
+                  "prepare_s": 0.06729,
+                  "train_loop_s": 1.78732,
+                  "compute_honest_s": 1.85461,
+                  "graded": 0.94,
+                  "model_fp": "d6f9288f8118585bbdb9c890b01690bc",
+                  "eval_s": 0.3558,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  }
+                },
+                {
+                  "tid": 1,
+                  "local_idx": 1,
+                  "prepare_s": 0.06495,
+                  "train_loop_s": 1.75802,
+                  "compute_honest_s": 1.82297,
+                  "graded": 0.941875,
+                  "model_fp": "495dbe5eef1c5790e104acbdacc35f0e",
+                  "eval_s": 0.1494,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "order": [
+                1,
+                0
+              ],
+              "rows": [
+                {
+                  "tid": 1,
+                  "local_idx": 0,
+                  "prepare_s": 0.06226,
+                  "train_loop_s": 1.76247,
+                  "compute_honest_s": 1.82473,
+                  "graded": 0.941875,
+                  "model_fp": "495dbe5eef1c5790e104acbdacc35f0e",
+                  "eval_s": 0.1494,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  }
+                },
+                {
+                  "tid": 0,
+                  "local_idx": 1,
+                  "prepare_s": 0.06297,
+                  "train_loop_s": 1.7638,
+                  "compute_honest_s": 1.82677,
+                  "graded": 0.94,
+                  "model_fp": "d6f9288f8118585bbdb9c890b01690bc",
+                  "eval_s": 0.1494,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

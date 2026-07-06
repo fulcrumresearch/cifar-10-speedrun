@@ -1,0 +1,23 @@
+{
+  "label": "e5_ds24_s85_smoke",
+  "target": "e5_ds",
+  "n": 8,
+  "containers": 4,
+  "seed": 0,
+  "overrides": {
+    "res_schedule": [
+      24,
+      24,
+      24,
+      28,
+      28,
+      28,
+      32,
+      32,
+      32
+    ],
+    "train_epochs": 8.5,
+    "decay_epochs": 8.375
+  },
+  "plain_eval": true
+}

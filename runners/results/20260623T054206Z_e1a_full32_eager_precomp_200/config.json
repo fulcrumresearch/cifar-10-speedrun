@@ -1,0 +1,9 @@
+{
+  "label": "e1a_full32_eager_precomp",
+  "target": "e1a_full32_eager_precomp",
+  "n": 200,
+  "containers": 12,
+  "seed": 0,
+  "overrides": {},
+  "plain_eval": true
+}

@@ -1,0 +1,1231 @@
+{
+  "local": {
+    "certification_edge_cases": {
+      "all_pass_0.95": {
+        "p": 0.0,
+        "certifies": true,
+        "acc_mean": 0.95
+      },
+      "all_fail_0.93": {
+        "p": 1.0,
+        "certifies": false,
+        "acc_mean": 0.93
+      },
+      "zerovar_pass": {
+        "p": 0.0,
+        "certifies": true,
+        "acc_mean": 0.95
+      },
+      "zerovar_fail": {
+        "p": 1.0,
+        "certifies": false,
+        "acc_mean": 0.93
+      },
+      "mixed": {
+        "p": 0.10010003708314215,
+        "certifies": false,
+        "acc_mean": 0.941
+      }
+    },
+    "flat_mirror_guard": {
+      "incomplete": {
+        "mirror_written": false,
+        "expected": false
+      },
+      "mutated": {
+        "mirror_written": false,
+        "expected": false
+      },
+      "valid": {
+        "mirror_written": true,
+        "expected": true
+      }
+    }
+  },
+  "targets": {
+    "hiverge": {
+      "build_s": {
+        "X": 19.172,
+        "Y": 27.832
+      },
+      "telemetry": {
+        "X_build": [
+          {
+            "temp_c": 43.0,
+            "power_w": 71.41,
+            "sm_mhz": 750.0
+          },
+          {
+            "temp_c": 48.0,
+            "power_w": 290.68,
+            "sm_mhz": 1275.0
+          }
+        ]
+      },
+      "dataset_sha_match_across_containers": "MATCH",
+      "static_cache_match_across_containers": "MATCH",
+      "static_cache_sig": {
+        "norm": [
+          [
+            50000,
+            3,
+            32,
+            32
+          ],
+          "torch.float16",
+          -15020.844,
+          153575440.0
+        ],
+        "flip": [
+          [
+            50000,
+            3,
+            32,
+            32
+          ],
+          "torch.float16",
+          -15020.75,
+          153575440.0
+        ],
+        "pad": [
+          [
+            50000,
+            3,
+            36,
+            36
+          ],
+          "torch.float16",
+          2067632.625,
+          198169712.0
+        ]
+      },
+      "env": {
+        "python": "3.12.1",
+        "torch": "2.4.0+cu124",
+        "torchvision": "0.19.0+cu124",
+        "cuda": "12.4",
+        "runners_file": "/root/runners/__init__.py",
+        "cifar_data_env": "/cifar/data",
+        "device": "NVIDIA A100-SXM4-80GB"
+      },
+      "gpu": [
+        "NVIDIA A100-SXM4-80GB",
+        "NVIDIA A100-SXM4-80GB"
+      ],
+      "order_independence_within_X": {
+        "0": {
+          "model_fp": "MATCH",
+          "acc": "MATCH",
+          "acc_p0": 0.941125,
+          "acc_p1": 0.941125
+        },
+        "1": {
+          "model_fp": "MATCH",
+          "acc": "MATCH",
+          "acc_p0": 0.937875,
+          "acc_p1": 0.937875
+        }
+      },
+      "determinism_across_containers": {
+        "0": {
+          "model_fp": "MATCH",
+          "acc": "MATCH"
+        },
+        "1": {
+          "model_fp": "MATCH",
+          "acc": "MATCH"
+        }
+      },
+      "timing": {
+        "train_loop_mean_s": 1.9622,
+        "compute_honest_mean_s": 1.9955,
+        "acc_mean": 0.9395,
+        "acc_range": [
+          0.93788,
+          0.94112
+        ],
+        "first_trial_train_mean_s": 1.9613,
+        "rest_trial_train_mean_s": 1.9631,
+        "eval_s_mean": 0.2165,
+        "any_eval_mutated_weights": false
+      },
+      "_raw": {
+        "X": {
+          "target": "hiverge",
+          "env": {
+            "python": "3.12.1",
+            "torch": "2.4.0+cu124",
+            "torchvision": "0.19.0+cu124",
+            "cuda": "12.4",
+            "runners_file": "/root/runners/__init__.py",
+            "cifar_data_env": "/cifar/data",
+            "device": "NVIDIA A100-SXM4-80GB"
+          },
+          "dataset": {
+            "test_sha16": "86ee20a9754e0e82",
+            "train_sha16": "5a4d8933387d6f17",
+            "test_images_shape": [
+              10000,
+              32,
+              32,
+              3
+            ],
+            "test_label_counts": [
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000
+            ],
+            "classes": [
+              "airplane",
+              "automobile",
+              "bird",
+              "cat",
+              "deer",
+              "dog",
+              "frog",
+              "horse",
+              "ship",
+              "truck"
+            ]
+          },
+          "gpu_guard": "NVIDIA A100-SXM4-80GB",
+          "build": {
+            "build_s": 19.172,
+            "ok": true,
+            "telem_before": {
+              "temp_c": 43.0,
+              "power_w": 71.41,
+              "sm_mhz": 750.0
+            },
+            "telem_after": {
+              "temp_c": 48.0,
+              "power_w": 290.68,
+              "sm_mhz": 1275.0
+            }
+          },
+          "static_cache_sig": {
+            "norm": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.844,
+              153575440.0
+            ],
+            "flip": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.75,
+              153575440.0
+            ],
+            "pad": [
+              [
+                50000,
+                3,
+                36,
+                36
+              ],
+              "torch.float16",
+              2067632.625,
+              198169712.0
+            ]
+          },
+          "passes": [
+            {
+              "order": [
+                0,
+                1
+              ],
+              "rows": [
+                {
+                  "tid": 0,
+                  "local_idx": 0,
+                  "prepare_s": 0.05031,
+                  "train_loop_s": 1.96271,
+                  "compute_honest_s": 2.01302,
+                  "graded": 0.941125,
+                  "model_fp": "805e9199327d7d5f35e31e5b090efded",
+                  "eval_s": 0.3696,
+                  "eval_mutated_weights": false,
+                  "graph_state": {},
+                  "epoch_data_after_prepare": null
+                },
+                {
+                  "tid": 1,
+                  "local_idx": 1,
+                  "prepare_s": 0.02447,
+                  "train_loop_s": 1.96771,
+                  "compute_honest_s": 1.99218,
+                  "graded": 0.937875,
+                  "model_fp": "1c8925999ce76bcab20caf7db2c7ef1e",
+                  "eval_s": 0.1515,
+                  "eval_mutated_weights": false,
+                  "graph_state": {},
+                  "epoch_data_after_prepare": null
+                }
+              ]
+            },
+            {
+              "order": [
+                1,
+                0
+              ],
+              "rows": [
+                {
+                  "tid": 1,
+                  "local_idx": 0,
+                  "prepare_s": 0.0244,
+                  "train_loop_s": 1.97061,
+                  "compute_honest_s": 1.99501,
+                  "graded": 0.937875,
+                  "model_fp": "1c8925999ce76bcab20caf7db2c7ef1e",
+                  "eval_s": 0.1514,
+                  "eval_mutated_weights": false,
+                  "graph_state": {},
+                  "epoch_data_after_prepare": null
+                },
+                {
+                  "tid": 0,
+                  "local_idx": 1,
+                  "prepare_s": 0.02473,
+                  "train_loop_s": 1.9721,
+                  "compute_honest_s": 1.99683,
+                  "graded": 0.941125,
+                  "model_fp": "805e9199327d7d5f35e31e5b090efded",
+                  "eval_s": 0.1517,
+                  "eval_mutated_weights": false,
+                  "graph_state": {},
+                  "epoch_data_after_prepare": null
+                }
+              ]
+            }
+          ]
+        },
+        "Y": {
+          "target": "hiverge",
+          "env": {
+            "python": "3.12.1",
+            "torch": "2.4.0+cu124",
+            "torchvision": "0.19.0+cu124",
+            "cuda": "12.4",
+            "runners_file": "/root/runners/__init__.py",
+            "cifar_data_env": "/cifar/data",
+            "device": "NVIDIA A100-SXM4-80GB"
+          },
+          "dataset": {
+            "test_sha16": "86ee20a9754e0e82",
+            "train_sha16": "5a4d8933387d6f17",
+            "test_images_shape": [
+              10000,
+              32,
+              32,
+              3
+            ],
+            "test_label_counts": [
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000
+            ],
+            "classes": [
+              "airplane",
+              "automobile",
+              "bird",
+              "cat",
+              "deer",
+              "dog",
+              "frog",
+              "horse",
+              "ship",
+              "truck"
+            ]
+          },
+          "gpu_guard": "NVIDIA A100-SXM4-80GB",
+          "build": {
+            "build_s": 27.832,
+            "ok": true,
+            "telem_before": {
+              "temp_c": 31.0,
+              "power_w": 65.01,
+              "sm_mhz": 210.0
+            },
+            "telem_after": {
+              "temp_c": 36.0,
+              "power_w": 288.57,
+              "sm_mhz": 1155.0
+            }
+          },
+          "static_cache_sig": {
+            "norm": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.844,
+              153575440.0
+            ],
+            "flip": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.75,
+              153575440.0
+            ],
+            "pad": [
+              [
+                50000,
+                3,
+                36,
+                36
+              ],
+              "torch.float16",
+              2067632.625,
+              198169712.0
+            ]
+          },
+          "passes": [
+            {
+              "order": [
+                0,
+                1
+              ],
+              "rows": [
+                {
+                  "tid": 0,
+                  "local_idx": 0,
+                  "prepare_s": 0.06269,
+                  "train_loop_s": 1.95452,
+                  "compute_honest_s": 2.01721,
+                  "graded": 0.941125,
+                  "model_fp": "805e9199327d7d5f35e31e5b090efded",
+                  "eval_s": 0.4606,
+                  "eval_mutated_weights": false,
+                  "graph_state": {},
+                  "epoch_data_after_prepare": null
+                },
+                {
+                  "tid": 1,
+                  "local_idx": 1,
+                  "prepare_s": 0.02634,
+                  "train_loop_s": 1.95423,
+                  "compute_honest_s": 1.98056,
+                  "graded": 0.937875,
+                  "model_fp": "1c8925999ce76bcab20caf7db2c7ef1e",
+                  "eval_s": 0.1488,
+                  "eval_mutated_weights": false,
+                  "graph_state": {},
+                  "epoch_data_after_prepare": null
+                }
+              ]
+            },
+            {
+              "order": [
+                1,
+                0
+              ],
+              "rows": [
+                {
+                  "tid": 1,
+                  "local_idx": 0,
+                  "prepare_s": 0.02683,
+                  "train_loop_s": 1.95747,
+                  "compute_honest_s": 1.98429,
+                  "graded": 0.937875,
+                  "model_fp": "1c8925999ce76bcab20caf7db2c7ef1e",
+                  "eval_s": 0.1496,
+                  "eval_mutated_weights": false,
+                  "graph_state": {},
+                  "epoch_data_after_prepare": null
+                },
+                {
+                  "tid": 0,
+                  "local_idx": 1,
+                  "prepare_s": 0.0269,
+                  "train_loop_s": 1.95822,
+                  "compute_honest_s": 1.98511,
+                  "graded": 0.941125,
+                  "model_fp": "805e9199327d7d5f35e31e5b090efded",
+                  "eval_s": 0.1492,
+                  "eval_mutated_weights": false,
+                  "graph_state": {},
+                  "epoch_data_after_prepare": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "e1": {
+      "build_s": {
+        "X": 42.295,
+        "Y": 59.687
+      },
+      "telemetry": {
+        "X_build": [
+          {
+            "temp_c": 51.0,
+            "power_w": 99.43,
+            "sm_mhz": 1410.0
+          },
+          {
+            "temp_c": 48.0,
+            "power_w": 78.7,
+            "sm_mhz": 1155.0
+          }
+        ]
+      },
+      "dataset_sha_match_across_containers": "MATCH",
+      "static_cache_match_across_containers": "MATCH",
+      "static_cache_sig": {
+        "norm": [
+          [
+            50000,
+            3,
+            32,
+            32
+          ],
+          "torch.float16",
+          -15020.844,
+          153575440.0
+        ],
+        "flip": [
+          [
+            50000,
+            3,
+            32,
+            32
+          ],
+          "torch.float16",
+          -15020.781,
+          153575440.0
+        ],
+        "pad": [
+          [
+            50000,
+            3,
+            36,
+            36
+          ],
+          "torch.float16",
+          2067632.625,
+          198169728.0
+        ]
+      },
+      "env": {
+        "python": "3.12.1",
+        "torch": "2.4.0+cu124",
+        "torchvision": "0.19.0+cu124",
+        "cuda": "12.4",
+        "runners_file": "/root/runners/__init__.py",
+        "cifar_data_env": "/cifar/data",
+        "device": "NVIDIA A100-SXM4-80GB",
+        "e1_recipe_file": "/root/runners/recipes/e1.py",
+        "e1_DATA_PATH": "/cifar/data"
+      },
+      "gpu": [
+        "NVIDIA A100-SXM4-80GB",
+        "NVIDIA A100-SXM4-80GB"
+      ],
+      "order_independence_within_X": {
+        "0": {
+          "model_fp": "MATCH",
+          "acc": "MATCH",
+          "acc_p0": 0.941125,
+          "acc_p1": 0.941125
+        },
+        "1": {
+          "model_fp": "MATCH",
+          "acc": "MATCH",
+          "acc_p0": 0.94175,
+          "acc_p1": 0.94175
+        }
+      },
+      "determinism_across_containers": {
+        "0": {
+          "model_fp": "DIFFER",
+          "acc": "DIFFER"
+        },
+        "1": {
+          "model_fp": "DIFFER",
+          "acc": "DIFFER"
+        }
+      },
+      "timing": {
+        "train_loop_mean_s": 1.7724,
+        "compute_honest_mean_s": 1.8354,
+        "acc_mean": 0.94119,
+        "acc_range": [
+          0.94088,
+          0.94175
+        ],
+        "first_trial_train_mean_s": 1.7747,
+        "rest_trial_train_mean_s": 1.7701,
+        "eval_s_mean": 0.1838,
+        "any_eval_mutated_weights": false
+      },
+      "e1_graph_state_sample": {
+        "opt2_step_count": 0,
+        "loader_epoch": 9,
+        "n_momentum_buffers": 6,
+        "momentum_absmax_before_train": 0.0
+      },
+      "epoch_data_build_vs_prepare": {
+        "0": "overwritten (good)",
+        "1": "overwritten (good)"
+      },
+      "epoch_data_order_independent": {
+        "0": "MATCH",
+        "1": "MATCH"
+      },
+      "_raw": {
+        "X": {
+          "target": "e1",
+          "env": {
+            "python": "3.12.1",
+            "torch": "2.4.0+cu124",
+            "torchvision": "0.19.0+cu124",
+            "cuda": "12.4",
+            "runners_file": "/root/runners/__init__.py",
+            "cifar_data_env": "/cifar/data",
+            "device": "NVIDIA A100-SXM4-80GB",
+            "e1_recipe_file": "/root/runners/recipes/e1.py",
+            "e1_DATA_PATH": "/cifar/data"
+          },
+          "dataset": {
+            "test_sha16": "86ee20a9754e0e82",
+            "train_sha16": "5a4d8933387d6f17",
+            "test_images_shape": [
+              10000,
+              32,
+              32,
+              3
+            ],
+            "test_label_counts": [
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000
+            ],
+            "classes": [
+              "airplane",
+              "automobile",
+              "bird",
+              "cat",
+              "deer",
+              "dog",
+              "frog",
+              "horse",
+              "ship",
+              "truck"
+            ]
+          },
+          "gpu_guard": "NVIDIA A100-SXM4-80GB",
+          "build": {
+            "build_s": 42.295,
+            "ok": true,
+            "telem_before": {
+              "temp_c": 51.0,
+              "power_w": 99.43,
+              "sm_mhz": 1410.0
+            },
+            "telem_after": {
+              "temp_c": 48.0,
+              "power_w": 78.7,
+              "sm_mhz": 1155.0
+            }
+          },
+          "epoch_data_after_build": {
+            "n_steps": 288,
+            "first": [
+              [
+                1536,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              29645.988,
+              4781373.0
+            ],
+            "last": [
+              [
+                1536,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -60292.852,
+              4725278.0
+            ]
+          },
+          "static_cache_sig": {
+            "norm": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.844,
+              153575440.0
+            ],
+            "flip": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.781,
+              153575440.0
+            ],
+            "pad": [
+              [
+                50000,
+                3,
+                36,
+                36
+              ],
+              "torch.float16",
+              2067632.625,
+              198169728.0
+            ]
+          },
+          "passes": [
+            {
+              "order": [
+                0,
+                1
+              ],
+              "rows": [
+                {
+                  "tid": 0,
+                  "local_idx": 0,
+                  "prepare_s": 0.0657,
+                  "train_loop_s": 1.79578,
+                  "compute_honest_s": 1.86148,
+                  "graded": 0.941125,
+                  "model_fp": "2c20b2f65eec1c525c98c00ba0cb7fa3",
+                  "eval_s": 0.1525,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  },
+                  "epoch_data_after_prepare": {
+                    "n_steps": 288,
+                    "first": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      20939.219,
+                      4731108.5
+                    ],
+                    "last": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      24108.805,
+                      4750335.5
+                    ]
+                  }
+                },
+                {
+                  "tid": 1,
+                  "local_idx": 1,
+                  "prepare_s": 0.05988,
+                  "train_loop_s": 1.79079,
+                  "compute_honest_s": 1.85066,
+                  "graded": 0.94175,
+                  "model_fp": "b50d31435db06c0a902b73bb534aac8e",
+                  "eval_s": 0.1523,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  },
+                  "epoch_data_after_prepare": {
+                    "n_steps": 288,
+                    "first": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      54106.266,
+                      4747510.0
+                    ],
+                    "last": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      -51169.695,
+                      4677001.0
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "order": [
+                1,
+                0
+              ],
+              "rows": [
+                {
+                  "tid": 1,
+                  "local_idx": 0,
+                  "prepare_s": 0.05961,
+                  "train_loop_s": 1.79172,
+                  "compute_honest_s": 1.85134,
+                  "graded": 0.94175,
+                  "model_fp": "b50d31435db06c0a902b73bb534aac8e",
+                  "eval_s": 0.1525,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  },
+                  "epoch_data_after_prepare": {
+                    "n_steps": 288,
+                    "first": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      54106.266,
+                      4747510.0
+                    ],
+                    "last": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      -51169.695,
+                      4677001.0
+                    ]
+                  }
+                },
+                {
+                  "tid": 0,
+                  "local_idx": 1,
+                  "prepare_s": 0.06018,
+                  "train_loop_s": 1.79274,
+                  "compute_honest_s": 1.85292,
+                  "graded": 0.941125,
+                  "model_fp": "2c20b2f65eec1c525c98c00ba0cb7fa3",
+                  "eval_s": 0.1526,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  },
+                  "epoch_data_after_prepare": {
+                    "n_steps": 288,
+                    "first": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      20939.219,
+                      4731108.5
+                    ],
+                    "last": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      24108.805,
+                      4750335.5
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Y": {
+          "target": "e1",
+          "env": {
+            "python": "3.12.1",
+            "torch": "2.4.0+cu124",
+            "torchvision": "0.19.0+cu124",
+            "cuda": "12.4",
+            "runners_file": "/root/runners/__init__.py",
+            "cifar_data_env": "/cifar/data",
+            "device": "NVIDIA A100-SXM4-80GB",
+            "e1_recipe_file": "/root/runners/recipes/e1.py",
+            "e1_DATA_PATH": "/cifar/data"
+          },
+          "dataset": {
+            "test_sha16": "86ee20a9754e0e82",
+            "train_sha16": "5a4d8933387d6f17",
+            "test_images_shape": [
+              10000,
+              32,
+              32,
+              3
+            ],
+            "test_label_counts": [
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000,
+              1000
+            ],
+            "classes": [
+              "airplane",
+              "automobile",
+              "bird",
+              "cat",
+              "deer",
+              "dog",
+              "frog",
+              "horse",
+              "ship",
+              "truck"
+            ]
+          },
+          "gpu_guard": "NVIDIA A100-SXM4-80GB",
+          "build": {
+            "build_s": 59.687,
+            "ok": true,
+            "telem_before": {
+              "temp_c": 31.0,
+              "power_w": 65.38,
+              "sm_mhz": 780.0
+            },
+            "telem_after": {
+              "temp_c": 35.0,
+              "power_w": 70.54,
+              "sm_mhz": 1155.0
+            }
+          },
+          "epoch_data_after_build": {
+            "n_steps": 288,
+            "first": [
+              [
+                1536,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              29645.988,
+              4781373.0
+            ],
+            "last": [
+              [
+                1536,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -60292.852,
+              4725278.0
+            ]
+          },
+          "static_cache_sig": {
+            "norm": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.844,
+              153575440.0
+            ],
+            "flip": [
+              [
+                50000,
+                3,
+                32,
+                32
+              ],
+              "torch.float16",
+              -15020.781,
+              153575440.0
+            ],
+            "pad": [
+              [
+                50000,
+                3,
+                36,
+                36
+              ],
+              "torch.float16",
+              2067632.625,
+              198169728.0
+            ]
+          },
+          "passes": [
+            {
+              "order": [
+                0,
+                1
+              ],
+              "rows": [
+                {
+                  "tid": 0,
+                  "local_idx": 0,
+                  "prepare_s": 0.06847,
+                  "train_loop_s": 1.76189,
+                  "compute_honest_s": 1.83036,
+                  "graded": 0.940875,
+                  "model_fp": "a7b045b524c9cf7b1cbe47a4b7d2aefe",
+                  "eval_s": 0.4145,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  },
+                  "epoch_data_after_prepare": {
+                    "n_steps": 288,
+                    "first": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      20939.219,
+                      4731108.5
+                    ],
+                    "last": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      24108.805,
+                      4750335.5
+                    ]
+                  }
+                },
+                {
+                  "tid": 1,
+                  "local_idx": 1,
+                  "prepare_s": 0.0645,
+                  "train_loop_s": 1.74568,
+                  "compute_honest_s": 1.81018,
+                  "graded": 0.941,
+                  "model_fp": "838cf7841a3af8f574fc7a16fb3ac4fe",
+                  "eval_s": 0.1486,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  },
+                  "epoch_data_after_prepare": {
+                    "n_steps": 288,
+                    "first": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      54106.266,
+                      4747510.0
+                    ],
+                    "last": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      -51169.695,
+                      4677001.0
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "order": [
+                1,
+                0
+              ],
+              "rows": [
+                {
+                  "tid": 1,
+                  "local_idx": 0,
+                  "prepare_s": 0.06297,
+                  "train_loop_s": 1.74926,
+                  "compute_honest_s": 1.81222,
+                  "graded": 0.941,
+                  "model_fp": "838cf7841a3af8f574fc7a16fb3ac4fe",
+                  "eval_s": 0.1486,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  },
+                  "epoch_data_after_prepare": {
+                    "n_steps": 288,
+                    "first": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      54106.266,
+                      4747510.0
+                    ],
+                    "last": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      -51169.695,
+                      4677001.0
+                    ]
+                  }
+                },
+                {
+                  "tid": 0,
+                  "local_idx": 1,
+                  "prepare_s": 0.06309,
+                  "train_loop_s": 1.75111,
+                  "compute_honest_s": 1.8142,
+                  "graded": 0.940875,
+                  "model_fp": "a7b045b524c9cf7b1cbe47a4b7d2aefe",
+                  "eval_s": 0.1487,
+                  "eval_mutated_weights": false,
+                  "graph_state": {
+                    "opt2_step_count": 0,
+                    "loader_epoch": 9,
+                    "n_momentum_buffers": 6,
+                    "momentum_absmax_before_train": 0.0
+                  },
+                  "epoch_data_after_prepare": {
+                    "n_steps": 288,
+                    "first": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      20939.219,
+                      4731108.5
+                    ],
+                    "last": [
+                      [
+                        1536,
+                        3,
+                        32,
+                        32
+                      ],
+                      "torch.float16",
+                      24108.805,
+                      4750335.5
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "label": "e1a_prog28_s825_smoke",
+  "target": "e1a_prog_mega",
+  "n": 8,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "res_schedule": [
+      28,
+      28,
+      28,
+      28,
+      28,
+      32,
+      32,
+      32,
+      32
+    ],
+    "train_epochs": 8.25,
+    "decay_epochs": 7.875
+  },
+  "plain_eval": true
+}

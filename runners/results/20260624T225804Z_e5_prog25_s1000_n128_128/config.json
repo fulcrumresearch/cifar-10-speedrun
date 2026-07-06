@@ -1,0 +1,23 @@
+{
+  "label": "e5_prog25_s1000_n128",
+  "target": "e5",
+  "n": 128,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "res_schedule": [
+      25,
+      25,
+      25,
+      28,
+      28,
+      28,
+      32,
+      32,
+      32
+    ],
+    "train_epochs": 10.0,
+    "decay_epochs": 9.875
+  },
+  "plain_eval": true
+}

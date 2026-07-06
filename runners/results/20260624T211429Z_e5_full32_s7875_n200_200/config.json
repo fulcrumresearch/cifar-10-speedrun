@@ -1,0 +1,12 @@
+{
+  "label": "e5_full32_s7875_n200",
+  "target": "e5_full32",
+  "n": 200,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "train_epochs": 7.875,
+    "decay_epochs": 7.75
+  },
+  "plain_eval": true
+}

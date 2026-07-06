@@ -1,0 +1,9 @@
+{
+  "label": "hiverge765_perstep_aug_eager",
+  "target": "hiverge765_perstep_aug_eager",
+  "n": 200,
+  "containers": 16,
+  "seed": 0,
+  "overrides": {},
+  "plain_eval": true
+}

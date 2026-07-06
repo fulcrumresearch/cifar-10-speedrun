@@ -1,0 +1,23 @@
+{
+  "label": "e5_prog24_s85_n64b",
+  "target": "e5",
+  "n": 64,
+  "containers": 8,
+  "seed": 0,
+  "overrides": {
+    "res_schedule": [
+      24,
+      24,
+      24,
+      28,
+      28,
+      28,
+      32,
+      32,
+      32
+    ],
+    "train_epochs": 8.5,
+    "decay_epochs": 8.375
+  },
+  "plain_eval": true
+}

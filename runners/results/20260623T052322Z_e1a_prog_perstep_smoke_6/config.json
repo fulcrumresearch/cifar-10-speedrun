@@ -1,0 +1,9 @@
+{
+  "label": "e1a_prog_perstep_smoke",
+  "target": "e1a_prog_perstep",
+  "n": 6,
+  "containers": 3,
+  "seed": 0,
+  "overrides": {},
+  "plain_eval": true
+}

@@ -1,0 +1,54 @@
+{
+  "label": "e5_full32_s775_n200",
+  "overrides": {
+    "train_epochs": 7.75,
+    "decay_epochs": 7.625
+  },
+  "n_requested": 200,
+  "n_returned": 200,
+  "complete": true,
+  "metric": "compute_honest_s",
+  "time": {
+    "mean_s": 1.9976,
+    "std_s": 0.0224,
+    "min_s": 1.9229,
+    "n": 200
+  },
+  "acc_mean": 0.94042,
+  "acc_std": 0.00146,
+  "acc_min": 0.93612,
+  "n_pass_ge_0.94": 125,
+  "pass_rate": 0.625,
+  "p_value_vs_0.94_one_sided": 4.023250246564376e-05,
+  "certifies": true,
+  "cluster": {
+    "containers": 24,
+    "time_mean_by_container_std_s": 0.0222
+  },
+  "drop_first_trial": {
+    "time_mean_s": 1.998,
+    "n": 176
+  },
+  "diagnostics": {
+    "train_loop": {
+      "mean_s": 1.9714,
+      "std_s": 0.0213,
+      "min_s": 1.9032,
+      "n": 200
+    },
+    "prepare": {
+      "mean_s": 0.0261,
+      "std_s": 0.002,
+      "min_s": 0.0195,
+      "n": 200,
+      "breakdown_mean_s": {
+        "reset+whiten": 0.026
+      }
+    }
+  },
+  "validate_mutations": 0,
+  "gpus": [
+    "NVIDIA A100-SXM4-80GB"
+  ],
+  "valid": true
+}

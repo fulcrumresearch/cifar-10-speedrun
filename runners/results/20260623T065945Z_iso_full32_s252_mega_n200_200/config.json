@@ -1,0 +1,12 @@
+{
+  "label": "iso_full32_s252_mega_n200",
+  "target": "e1a_full32_mega",
+  "n": 200,
+  "containers": 16,
+  "seed": 0,
+  "overrides": {
+    "train_epochs": 7.859375,
+    "decay_epochs": 7.484375
+  },
+  "plain_eval": true
+}

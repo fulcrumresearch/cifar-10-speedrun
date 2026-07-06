@@ -1,0 +1,9 @@
+{
+  "label": "e1a_full32_perstep_smoke",
+  "target": "e1a_full32_perstep",
+  "n": 6,
+  "containers": 3,
+  "seed": 0,
+  "overrides": {},
+  "plain_eval": true
+}

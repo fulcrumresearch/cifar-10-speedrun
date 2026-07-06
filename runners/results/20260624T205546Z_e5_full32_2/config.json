@@ -1,0 +1,9 @@
+{
+  "label": "e5_full32",
+  "target": "e5_full32",
+  "n": 2,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {},
+  "plain_eval": true
+}

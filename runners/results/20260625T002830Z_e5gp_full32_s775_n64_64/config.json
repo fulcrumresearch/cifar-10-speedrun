@@ -1,0 +1,12 @@
+{
+  "label": "e5gp_full32_s775_n64",
+  "target": "e5_full32",
+  "n": 64,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "train_epochs": 7.75,
+    "decay_epochs": 7.625
+  },
+  "plain_eval": true
+}

@@ -1,0 +1,23 @@
+{
+  "label": "e1a_prog28_s85_n64",
+  "target": "e1a_prog_mega",
+  "n": 64,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "res_schedule": [
+      28,
+      28,
+      28,
+      28,
+      28,
+      32,
+      32,
+      32,
+      32
+    ],
+    "train_epochs": 8.5,
+    "decay_epochs": 8.125
+  },
+  "plain_eval": true
+}

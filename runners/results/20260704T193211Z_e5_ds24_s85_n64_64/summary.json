@@ -1,0 +1,65 @@
+{
+  "label": "e5_ds24_s85_n64",
+  "overrides": {
+    "res_schedule": [
+      24,
+      24,
+      24,
+      28,
+      28,
+      28,
+      32,
+      32,
+      32
+    ],
+    "train_epochs": 8.5,
+    "decay_epochs": 8.375
+  },
+  "n_requested": 64,
+  "n_returned": 64,
+  "complete": true,
+  "metric": "compute_honest_s",
+  "time": {
+    "mean_s": 2.3448,
+    "std_s": 0.023,
+    "min_s": 2.3088,
+    "n": 64
+  },
+  "acc_mean": 0.93957,
+  "acc_std": 0.0013,
+  "acc_min": 0.93712,
+  "n_pass_ge_0.94": 23,
+  "pass_rate": 0.359,
+  "p_value_vs_0.94_one_sided": 0.9948188973540372,
+  "certifies": false,
+  "cluster": {
+    "containers": 8,
+    "time_mean_by_container_std_s": 0.0226
+  },
+  "drop_first_trial": {
+    "time_mean_s": 2.3456,
+    "n": 56
+  },
+  "diagnostics": {
+    "train_loop": {
+      "mean_s": 2.3182,
+      "std_s": 0.0242,
+      "min_s": 2.2802,
+      "n": 64
+    },
+    "prepare": {
+      "mean_s": 0.0267,
+      "std_s": 0.0021,
+      "min_s": 0.0231,
+      "n": 64,
+      "breakdown_mean_s": {
+        "reset+whiten": 0.0266
+      }
+    }
+  },
+  "validate_mutations": 0,
+  "gpus": [
+    "NVIDIA A100-SXM4-80GB"
+  ],
+  "valid": true
+}

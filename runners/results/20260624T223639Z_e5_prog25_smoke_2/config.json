@@ -1,0 +1,21 @@
+{
+  "label": "e5_prog25_smoke",
+  "target": "e5",
+  "n": 2,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "res_schedule": [
+      25,
+      25,
+      25,
+      28,
+      28,
+      28,
+      32,
+      32,
+      32
+    ]
+  },
+  "plain_eval": true
+}

@@ -1,0 +1,23 @@
+{
+  "label": "e1a_prog28_s8375_n200",
+  "target": "e1a_prog_mega",
+  "n": 200,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "res_schedule": [
+      28,
+      28,
+      28,
+      28,
+      28,
+      32,
+      32,
+      32,
+      32
+    ],
+    "train_epochs": 8.375,
+    "decay_epochs": 8.0
+  },
+  "plain_eval": true
+}

@@ -1,0 +1,55 @@
+{
+  "label": "iso_full32_s252_perstep_n120",
+  "overrides": {
+    "train_epochs": 7.859375,
+    "decay_epochs": 7.484375
+  },
+  "n_requested": 120,
+  "n_returned": 120,
+  "complete": true,
+  "metric": "compute_honest_s",
+  "time": {
+    "mean_s": 2.0739,
+    "std_s": 0.0249,
+    "min_s": 2.0229,
+    "n": 120
+  },
+  "acc_mean": 0.94049,
+  "acc_std": 0.0014,
+  "acc_min": 0.937,
+  "n_pass_ge_0.94": 76,
+  "pass_rate": 0.633,
+  "p_value_vs_0.94_one_sided": 0.0001135427771988758,
+  "certifies": true,
+  "cluster": {
+    "containers": 16,
+    "time_mean_by_container_std_s": 0.0241
+  },
+  "drop_first_trial": {
+    "time_mean_s": 2.0719,
+    "n": 104
+  },
+  "diagnostics": {
+    "train_loop": {
+      "mean_s": 2.0149,
+      "std_s": 0.0257,
+      "min_s": 1.9621,
+      "n": 120
+    },
+    "prepare": {
+      "mean_s": 0.059,
+      "std_s": 0.0034,
+      "min_s": 0.0532,
+      "n": 120,
+      "breakdown_mean_s": {
+        "reset+whiten+precompute": 0.0588,
+        "graph_prepare": 0.0001
+      }
+    }
+  },
+  "validate_mutations": 0,
+  "gpus": [
+    "NVIDIA A100-SXM4-80GB"
+  ],
+  "valid": true
+}

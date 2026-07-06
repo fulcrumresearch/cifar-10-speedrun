@@ -1,0 +1,28 @@
+# secrets — never commit (Modal tokens etc.)
+.env
+.env.*
+# python
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+# uv virtualenv
+.venv/
+# harness run logs
+bench/*.log
+# internal draft, not part of the public repo
+blogpost.md
+# fable run traces/notes — kept local, not part of the public repo
+fable-100m/NOTES.md
+fable-100m/reasoning/
+fable-100m/trajectories/
+fable-100m/recipes/e4_1.14s_DUAL-GPU_INVALID.py
+# not part of the public repo: legacy harness, upstream scaffolding, fable run extras
+bench/
+base/README.hiverge.md
+base/img/
+base/requirements.txt
+figures/lineage/
+fable-100m-unfinished/README.md
+fable-100m-unfinished/diffs/
+fable-100m-unfinished/

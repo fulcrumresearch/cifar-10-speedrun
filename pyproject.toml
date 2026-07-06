@@ -1,0 +1,16 @@
+[project]
+name = "cifar-improvements"
+version = "0.1.0"
+description = "Ablation analysis of fable-5's CIFAR-10 speedrun improvements vs the hiverge baseline"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.8,<3.10",
+    "modal>=1.5.0",
+    "scienceplots>=2.2.1",
+    "scipy>=1.15.3",
+]
+
+# GPU measurement via the self-contained runners/ Modal harness, plus local plotting:
+#   uv run modal run runners/run.py::trial --e1 --n 200
+#   uv run python figures/plot.py
+# (torch runs only on the Modal worker image; matplotlib<3.10 for scienceplots.)

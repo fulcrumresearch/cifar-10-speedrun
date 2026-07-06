@@ -1,0 +1,53 @@
+{
+  "local": {
+    "certification_edge_cases": {
+      "all_pass_0.95": {
+        "p": 0.0,
+        "certifies": true,
+        "acc_mean": 0.95
+      },
+      "all_fail_0.93": {
+        "p": 1.0,
+        "certifies": false,
+        "acc_mean": 0.93
+      },
+      "zerovar_pass": {
+        "p": 0.0,
+        "certifies": true,
+        "acc_mean": 0.95
+      },
+      "zerovar_fail": {
+        "p": 1.0,
+        "certifies": false,
+        "acc_mean": 0.93
+      },
+      "mixed": {
+        "p": 0.10010003708314215,
+        "certifies": false,
+        "acc_mean": 0.941
+      }
+    },
+    "flat_mirror_guard": {
+      "incomplete": {
+        "mirror_written": false,
+        "expected": false
+      },
+      "mutated": {
+        "mirror_written": false,
+        "expected": false
+      },
+      "valid": {
+        "mirror_written": true,
+        "expected": true
+      }
+    }
+  },
+  "targets": {
+    "hiverge": {
+      "error": "DeserializationError(\"Deserialization failed because the 'torch' module is not available in the local environment.\")"
+    },
+    "e1": {
+      "error": "DeserializationError(\"Deserialization failed because the 'torch' module is not available in the local environment.\")"
+    }
+  }
+}

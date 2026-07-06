@@ -1,0 +1,12 @@
+{
+  "label": "e5_full32_s750_n200",
+  "target": "e5_full32",
+  "n": 200,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "train_epochs": 7.5,
+    "decay_epochs": 7.375
+  },
+  "plain_eval": true
+}

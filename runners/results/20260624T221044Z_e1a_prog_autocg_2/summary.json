@@ -1,0 +1,51 @@
+{
+  "label": "e1a_prog_autocg",
+  "overrides": {},
+  "n_requested": 2,
+  "n_returned": 2,
+  "complete": true,
+  "metric": "compute_honest_s",
+  "time": {
+    "mean_s": 79.6518,
+    "std_s": 2.1894,
+    "min_s": 77.4625,
+    "n": 2
+  },
+  "acc_mean": 0.93969,
+  "acc_std": 0.00069,
+  "acc_min": 0.939,
+  "n_pass_ge_0.94": 1,
+  "pass_rate": 0.5,
+  "p_value_vs_0.94_one_sided": 0.6357997487800667,
+  "certifies": false,
+  "cluster": {
+    "containers": 2,
+    "time_mean_by_container_std_s": 2.1894
+  },
+  "drop_first_trial": {
+    "time_mean_s": null,
+    "n": 0
+  },
+  "diagnostics": {
+    "train_loop": {
+      "mean_s": 79.5865,
+      "std_s": 2.1882,
+      "min_s": 77.3983,
+      "n": 2
+    },
+    "prepare": {
+      "mean_s": 0.0654,
+      "std_s": 0.0012,
+      "min_s": 0.0642,
+      "n": 2,
+      "breakdown_mean_s": {
+        "reset+whiten+precompute": 0.0653
+      }
+    }
+  },
+  "validate_mutations": 0,
+  "gpus": [
+    "NVIDIA A100-SXM4-80GB"
+  ],
+  "valid": true
+}

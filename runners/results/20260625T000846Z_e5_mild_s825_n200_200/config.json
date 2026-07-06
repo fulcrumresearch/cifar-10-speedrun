@@ -1,0 +1,12 @@
+{
+  "label": "e5_mild_s825_n200",
+  "target": "e5",
+  "n": 200,
+  "containers": 24,
+  "seed": 0,
+  "overrides": {
+    "train_epochs": 8.25,
+    "decay_epochs": 8.125
+  },
+  "plain_eval": true
+}

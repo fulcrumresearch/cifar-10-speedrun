@@ -1,0 +1,9 @@
+{
+  "label": "e1a_full32_mega",
+  "target": "e1a_full32_mega",
+  "n": 200,
+  "containers": 12,
+  "seed": 0,
+  "overrides": {},
+  "plain_eval": true
+}
